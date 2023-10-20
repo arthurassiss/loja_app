@@ -43,26 +43,26 @@ const old_price = [
 ];
 
 export default function MySlider() {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [current_index, set_current_index] = useState(1);
 
   const prevSlide = () => {
-    const isFirstSlide = currentIndex === 1;
+    const isFirstSlide = current_index === 1;
     if (isFirstSlide) {
       return;
     }
 
-    const newIndex = currentIndex - 1;
-    setCurrentIndex(newIndex);
+    const newIndex = current_index - 1;
+    set_current_index(newIndex);
   };
 
   const nextSlide = () => {
-    const isLastSlide = currentIndex === images.length - 2;
+    const isLastSlide = current_index === images.length - 2;
     if (isLastSlide) {
       return;
     }
 
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex);
+    const newIndex = current_index + 1;
+    set_current_index(newIndex);
   };
 
   return (
@@ -82,10 +82,10 @@ export default function MySlider() {
             />
             <div className={styles.container_image}>
               <Card
-                src={images[currentIndex - 1]}
-                title={title[currentIndex - 1]}
-                price={price[currentIndex - 1]}
-                old_price={old_price[currentIndex - 1]}
+                src={images[current_index - 1]}
+                title={title[current_index - 1]}
+                price={price[current_index - 1]}
+                old_price={old_price[current_index - 1]}
               />
             </div>
           </div>
@@ -99,10 +99,10 @@ export default function MySlider() {
             />
             <div className={styles.container_image}>
               <Card
-                src={images[currentIndex]}
-                title={title[currentIndex]}
-                price={price[currentIndex]}
-                old_price={old_price[currentIndex]}
+                src={images[current_index]}
+                title={title[current_index]}
+                price={price[current_index]}
+                old_price={old_price[current_index]}
               />
             </div>
           </div>
@@ -116,10 +116,10 @@ export default function MySlider() {
             />
             <div className={styles.container_image}>
               <Card
-                src={images[currentIndex + 1]}
-                title={title[currentIndex + 1]}
-                price={price[currentIndex + 1]}
-                old_price={old_price[currentIndex + 1]}
+                src={images[current_index + 1]}
+                title={title[current_index + 1]}
+                price={price[current_index + 1]}
+                old_price={old_price[current_index + 1]}
               />
             </div>
           </div>

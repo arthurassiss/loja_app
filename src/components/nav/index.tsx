@@ -4,18 +4,18 @@ import { useState } from "react";
 import Close from "../close";
 
 export default function Nav() {
-  const [navBar, setNavBar] = useState(false);
+  const [nav_bar, set_nav_bar] = useState(false);
 
-  const handleNavBar = () => {
+  const handle_nav_bar = () => {
     const body = document.getElementsByTagName("body")[0];
 
 
-    if (!navBar) {
+    if (!nav_bar) {
       body.classList.add("no_scroll");
     } else {
       body.classList.remove("no_scroll");
     }
-    setNavBar(!navBar);
+    set_nav_bar(!nav_bar);
   };
 
   return (
@@ -23,29 +23,29 @@ export default function Nav() {
       <div>
         <div>
         
-          {navBar ? (
+          {nav_bar ? (
             <div>
               
-              <button className={styles.btn} onClick={handleNavBar}><Close /></button>
+              <button className={styles.btn} onClick={handle_nav_bar}><Close /></button>
               <div className={styles.container_ul}>
                 <ul className={styles.nav_list}>
                   <li className={styles.container_nav_list_el}>
-                    <a className={styles.nav_list_el} onClick={handleNavBar} href="#home">
+                    <a className={styles.nav_list_el} onClick={handle_nav_bar} href="#home">
                       Home
                     </a>
                   </li>
                   <li className={styles.container_nav_list_el}>
-                    <a className={styles.nav_list_el} onClick={handleNavBar} href="#promotion">
+                    <a className={styles.nav_list_el} onClick={handle_nav_bar} href="#promotion">
                       Promotion
                     </a>
                   </li>
                   <li className={styles.container_nav_list_el}>
-                    <a className={styles.nav_list_el} onClick={handleNavBar} href="#trending">
+                    <a className={styles.nav_list_el} onClick={handle_nav_bar} href="#trending">
                       Trending
                     </a>
                   </li>
                   <li className={styles.container_nav_list_el}>
-                    <a className={styles.nav_list_el} onClick={handleNavBar} href="#contacts">
+                    <a className={styles.nav_list_el} onClick={handle_nav_bar} href="#contacts">
                       Contacts
                     </a>
                   </li>
@@ -55,7 +55,7 @@ export default function Nav() {
             
           ) : (
             <div>
-              <button className={styles.btn} onClick={handleNavBar}><Hamburguer /></button>
+              <button className={styles.btn} onClick={handle_nav_bar}><Hamburguer /></button>
               
             </div>
           )}
