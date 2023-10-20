@@ -1,0 +1,23 @@
+.btn {
+    width: 90%;
+    height: auto;
+
+}
+
+
+@media (min-width: 769px) and (max-width: 2400px) {
+    .btn {
+      
+    }
+  }
+  @media (min-width: 481px) and (max-width: 768.8px) {
+      .btn {
+          width: 3rem;
+      }
+  }
+  @media (max-width: 480.8px) {
+      .btn {
+          width: 3rem;
+      }
+      
+  }

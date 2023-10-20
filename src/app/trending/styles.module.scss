@@ -1,0 +1,90 @@
+.trending {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #303030;
+  padding: 2rem 0 10rem 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.container_back {
+  width: 90%;
+}
+.back {
+  display: none;
+}
+.title {
+  font-size: 4rem;
+  color: #fff;
+
+  font-weight: 700;
+}
+.container_Images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.images {
+  width: 20%;
+  object-fit: cover;
+  max-height: 250px;
+  border-radius: 7px;
+}
+@media (min-width: 769px) and (max-width: 1024.8px) {
+  .images {
+    width: 40%;
+    max-height: 400px;
+  }
+  .back {
+    display: inline;
+    width: 8%;
+  }
+  .trending {
+    padding: 0 0 10rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768.8px) {
+  .images {
+    width: 90%;
+  }
+  .back {
+    display: inline;
+    width: 10%;
+  }
+  .trending {
+    padding: 0 0 10rem 0;
+  }
+}
+@media (max-width: 480.8px) {
+  .images {
+    width: 90%;
+    height: 20%;
+  }
+  .back {
+    display: inline;
+    width: 10%;
+  }
+  .trending {
+    padding: 0 0 10rem 0;
+  }
+}
+@media (max-width: 350px) {
+  .title {
+    font-size: 3rem;
+  }
+  .back {
+    display: inline;
+    width: 20%;
+  }
+  .trending {
+    padding: 0 0 10rem 0;
+  }
+}

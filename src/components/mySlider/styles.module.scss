@@ -1,0 +1,47 @@
+.container_cards {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
+}
+.container_card {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.discount {
+    width: 4rem;
+    height: 4rem;
+}
+@media (min-width: 769px) and (max-width: 1024.8px) {
+    .card3 {
+        display: none;
+    }
+}
+
+@media (max-width: 768.8px){
+    .card2 {
+        display: none;
+    }
+    .card3 {
+        display: none;
+    }
+}
+
+@media (max-width: 480.8px){
+    .card2 {
+        display: none;
+    }
+    .card3 {
+        display: none;
+    }
+}
